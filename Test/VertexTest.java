@@ -25,11 +25,15 @@ public class VertexTest {
 
     private Type data;
     private Vertex sut;
+    private EdgeNode firstedge;
+
 
 
     @Before
     public void setUp() throws Exception {
-        sut = new Vertex();
+
+
+
     }
 
     @Test
@@ -45,7 +49,16 @@ public class VertexTest {
     }
 
 
+    @Test
+    public void shouldTestConstructor(){
+        assertEquals("Paris",new Vertex<String>("Paris").data);
+    }
 
+
+    @Test
+    public void shouldTestGetData(){
+        assertEquals("Berlin",new Vertex<String>("Berlin").getData());
+    }
 
 
 
