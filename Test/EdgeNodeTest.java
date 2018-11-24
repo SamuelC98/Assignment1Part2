@@ -26,4 +26,14 @@ public class EdgeNodeTest {
 
     }
 
+    @Test
+    public void shouldTestGetDest(){
+        assertEquals(1,sut.getDest());
+    }
+
+    @Test
+    public void shouldTestGetDistance(){
+        assertEquals(33,sut.getDistance());
+    }
+
 }
