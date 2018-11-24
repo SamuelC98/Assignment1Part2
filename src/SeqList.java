@@ -24,6 +24,7 @@ public class SeqList<Type> {
         return size;
     }
 
+    //get the element in seqlist
     public Type get(int index){
         if(index<0 || index>=size) throw new ArrayIndexOutOfBoundsException();
         return elements[index];
@@ -38,6 +39,7 @@ public class SeqList<Type> {
         return;
     }
 
+    // add elements
     public void add(int index, Type x){
         if( index<0 || index>size )
             throw new ArrayIndexOutOfBoundsException();
@@ -49,6 +51,7 @@ public class SeqList<Type> {
         size++;
     }
 
+    // directly add element
     public boolean add(Type x){
         add(size, x);
         return true;
