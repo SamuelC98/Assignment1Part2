@@ -8,6 +8,6 @@ public class Graph<Type> {
     }
 
     public Type getVertexData(int number){
-        return null;
+        return verticesList.get(number).getData();
     }
 }
