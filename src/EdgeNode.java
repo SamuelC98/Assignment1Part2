@@ -10,12 +10,10 @@ public class EdgeNode {
 
     }
 
-    public int getDest() {
-        return 0;
+    public int getDest() {return dest;
     }
 
-    public int getDistance() {
-        return 0;
+    public int getDistance() {return distance;
     }
 
 
