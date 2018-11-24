@@ -10,18 +10,24 @@ public class EdgeNode {
 
     }
 
+    //get destination
     public int getDest() {
         return dest;
     }
 
+    //get distance
     public int getDistance() {
         return distance;
     }
 
-    public int getFee() {return fee;
+    //get fee
+    public int getFee() {
+        return fee;
     }
 
-    public EdgeNode getNext() {return next;
+    //get next
+    public EdgeNode getNext() {
+        return next;
     }
 
 
