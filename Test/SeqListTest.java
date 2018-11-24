@@ -71,6 +71,15 @@ public class SeqListTest {
         sut.add(100,v3);
     }
 
+    @Test
+    public void shouldTestSpecialElementsLocation(){
+        for (int i = 0; i < 24; i++) {
+            sut.add(1,v2);
+        }
+        assertEquals("data2",sut.get(1).getData());
+
+    }
+
 
     @Test
     public void shouldTestSize(){

@@ -1,7 +1,7 @@
 import java.lang.reflect.Type;
 
 public class SeqList<Type> {
-    private static final int DEFAULT_CAPACITY = 30;
+    private static final int DEFAULT_CAPACITY = 23;
     private Type[] elements;
     public int size;
 
@@ -17,7 +17,6 @@ public class SeqList<Type> {
         this.elements = (Type[]) new Object[DEFAULT_CAPACITY];
         for(int i = 0;i<list.size;i++)
             this.elements[i] = list.elements[i];
-
     }
 
     public int size(){
