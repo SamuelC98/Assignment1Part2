@@ -1,5 +1,8 @@
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
 import java.lang.reflect.Type;
 import java.util.NoSuchElementException;
 import org.junit.Before;
@@ -62,5 +65,12 @@ public class VertexTest {
     }
 
 
+    @Test
+    public void shouldTestGetFirstEdgeDest(){
+        when(sut.firstEdge.getDest()).thenReturn(192);
+        assertEquals(192,sut.getFirstEdgeDest());
+        verify(sut.firstEdge).getDest();
+
+    }
 
 }

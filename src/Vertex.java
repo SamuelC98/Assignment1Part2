@@ -31,5 +31,10 @@ public class Vertex<Type> {
         return firstEdge;
     }
 
+    public int getFirstEdgeDest(){
+        return 0;
+
+    }
+
 
 }
