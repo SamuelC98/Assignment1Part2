@@ -42,15 +42,34 @@ public class SeqListTest {
     @Test
     public void shouleTestConstructor2(){
         test = new SeqList<>(sut);
-        assertEquals(0,test.size);
+        assertEquals(3,test.size);
     }
 
 
-    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    @Test
     public void shouldTestGet(){
         assertEquals("data1",sut.get(0).getData());
         assertEquals("data2",sut.get(1).getData());
         assertEquals("data3",sut.get(2).getData());
 
     }
+
+    @Test
+    public void shouldTestAdd(){
+        assertEquals(v1,sut.get(0));
+        assertEquals(v2,sut.get(1));
+
+    }
+
+    @Test
+    public void shouldTestAdd1(){
+        assertEquals(v3,sut.get(2));
+    }
+
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void shouldTestAddException(){
+        sut.add(100,v3);
+    }
+
+
 }
