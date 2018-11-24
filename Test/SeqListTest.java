@@ -72,4 +72,22 @@ public class SeqListTest {
     }
 
 
+    @Test
+    public void shouldTestSize(){
+        assertEquals(3,sut.size());
+    }
+
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void shouldTestGetException(){
+        sut.get(100);
+    }
+
+    @Test
+    public void shouldTestEnsureCapacity(){
+        sut.ensureCapacity(5);
+        v4 = mock(Vertex.class);
+        sut.add(3,v4);
+        assertEquals(4,sut.size());
+    }
+
 }
