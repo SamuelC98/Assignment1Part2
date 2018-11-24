@@ -42,7 +42,7 @@ public class SeqListTest {
     @Test
     public void shouleTestConstructor2(){
         test = new SeqList<>(sut);
-        assertEquals(3,sut.size);
+        assertEquals(0,test.size);
     }
 
 }
