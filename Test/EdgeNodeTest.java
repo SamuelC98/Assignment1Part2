@@ -36,4 +36,16 @@ public class EdgeNodeTest {
         assertEquals(33,sut.getDistance());
     }
 
+    @Test
+    public void shouldTestGetFee(){
+        assertEquals(23,sut.getFee());
+    }
+
+    @Test
+    public void shouldTestGetNext(){
+        assertEquals(2,sut.getNext().dest);
+        assertEquals(34,sut.getNext().distance);
+        assertEquals(4,sut.getNext().fee);
+    }
+
 }

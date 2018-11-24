@@ -18,6 +18,12 @@ public class EdgeNode {
         return distance;
     }
 
+    public int getFee() {return 0;
+    }
+
+    public EdgeNode getNext() {return null;
+    }
+
 
 
 }
