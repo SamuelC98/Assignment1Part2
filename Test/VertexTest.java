@@ -32,7 +32,8 @@ public class VertexTest {
     @Before
     public void setUp() throws Exception {
         sut = new Vertex();
-
+        EdgeNode edge = mock(EdgeNode.class);
+        sut.firstEdge = edge;
 
     }
 
@@ -60,7 +61,12 @@ public class VertexTest {
         assertEquals("Berlin",new Vertex<String>("Berlin").getData());
     }
 
+    @Test
+    public void shouldTestGetFirstEdge(){
+        assertEquals(sut.getFirstEdge(),sut.firstEdge);
 
+
+    }
 
 
 

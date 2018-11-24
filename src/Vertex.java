@@ -23,6 +23,9 @@ public class Vertex<Type> {
         return data;
     }
 
+    public EdgeNode getFirstEdge(){
+        return null;
+    }
 
 
 }
