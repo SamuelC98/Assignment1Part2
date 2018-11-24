@@ -45,4 +45,12 @@ public class SeqListTest {
         assertEquals(0,test.size);
     }
 
+
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void shouldTestGet(){
+        assertEquals("data1",sut.get(0).getData());
+        assertEquals("data2",sut.get(1).getData());
+        assertEquals("data3",sut.get(2).getData());
+
+    }
 }
