@@ -37,12 +37,14 @@ public class Vertex<Type> {
 
     }
 
+    //get firstedgefee
     public int getFirstEdgeFee(){
         return firstEdge.getFee();
 
 
     }
 
+    //get firstedgedistance
     public int getFirstEdgeDistance(){
         return firstEdge.getDistance();
 
