@@ -5,11 +5,13 @@ public class SeqList<Type> {
     private Type[] elements;
     public int size;
 
+    //constructor
     public SeqList( ){
         elements = (Type[]) new Object[DEFAULT_CAPACITY];
         size=0;
     }
 
+    //constructor1
     public SeqList(SeqList<Type>  list) {
         this.size = list.size;
         this.elements = (Type[]) new Object[DEFAULT_CAPACITY];
@@ -17,6 +19,7 @@ public class SeqList<Type> {
             this.elements[i] = list.elements[i];
 
     }
+
 
     public int size(){
         return -1;
