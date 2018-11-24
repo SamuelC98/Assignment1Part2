@@ -21,7 +21,7 @@ public class SeqList<Type> {
     }
 
     public int size(){
-        return -1;
+        return size;
     }
 
     public Type get(int index){
@@ -30,7 +30,12 @@ public class SeqList<Type> {
     }
 
     public void ensureCapacity(int newSize){
-
+        if( newSize < size ) return;
+        Type[] old = elements;
+        elements = (Type[])new Object[newSize];
+        for(int i=0; i<size; i++)
+            elements[i]=old[i];
+        return;
     }
 
     public void add(int index, Type x){
