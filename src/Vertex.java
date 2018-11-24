@@ -31,6 +31,7 @@ public class Vertex<Type> {
         return firstEdge;
     }
 
+    //get firstedgedest
     public int getFirstEdgeDest(){
         return firstEdge.getDest();
 
