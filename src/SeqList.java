@@ -35,9 +35,22 @@ public class SeqList<Type> {
 
     public void add(int index, Type x){
 
+        if( index<0 || index>size ) throw new ArrayIndexOutOfBoundsException();
+
+
+        if(elements.length==size)
+
+            ensureCapacity(size*2+1);
+        for (int i=size; i>index; i--)
+            elements[i]=elements[i-1];
+        elements[index]=x;
+
+
+        size++;
     }
 
     public boolean add(Type x){
-        return false;
+        add(size, x);
+        return true;
     }
 }
