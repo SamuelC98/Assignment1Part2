@@ -20,7 +20,6 @@ public class SeqList<Type> {
 
     }
 
-
     public int size(){
         return -1;
     }
