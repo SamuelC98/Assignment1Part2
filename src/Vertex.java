@@ -32,7 +32,7 @@ public class Vertex<Type> {
     }
 
     public int getFirstEdgeDest(){
-        return 0;
+        return firstEdge.getDest();
 
     }
 
