@@ -73,4 +73,20 @@ public class VertexTest {
 
     }
 
+    @Test
+    public void shouldTestGetFirstEdgeFee(){
+        when(sut.firstEdge.getFee()).thenReturn(11);
+        assertEquals(11,sut.getFirstEdgeFee());
+        verify(sut.firstEdge).getFee();
+
+    }
+
+    @Test
+    public void shouldTestGetFirstEdgeDistance(){
+        when(sut.firstEdge.getDistance()).thenReturn(22);
+        assertEquals(22,sut.getFirstEdgeDistance());
+        verify(sut.firstEdge).getDistance();
+
+    }
+
 }

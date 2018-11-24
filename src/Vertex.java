@@ -37,5 +37,17 @@ public class Vertex<Type> {
 
     }
 
+    public int getFirstEdgeFee(){
+        return 0;
+
+
+    }
+
+    public int getFirstEdgeDistance(){
+        return 0;
+
+
+    }
+
 
 }
