@@ -26,7 +26,8 @@ public class SeqList<Type> {
     }
 
     public Type get(int index){
-        return null;
+        if(index<0 || index>=size) throw new ArrayIndexOutOfBoundsException();
+        return elements[index];
     }
 
     public void ensureCapacity(int newSize){
