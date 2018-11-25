@@ -12,9 +12,9 @@ public class Graph<Type> {
         return verticesList.get(number).getData();
     }
 
+    //insert a vertex in graph
     public void InsertVertex(Type city) {
         Vertex<Type> vertex = new Vertex<>(city);
-
         verticesList.add(vertex);
         numVertex++;
 
