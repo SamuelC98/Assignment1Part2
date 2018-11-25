@@ -15,6 +15,10 @@ public class Graph<Type> {
     //insert a vertex in graph
     public void InsertVertex(Type city) {
         Vertex<Type> vertex = new Vertex<>(city);
+
+            if (verticesList.get(0).getData().equals(city))
+                throw new ArrayStoreException();
+
             verticesList.add(vertex);
             numVertex++;
 
