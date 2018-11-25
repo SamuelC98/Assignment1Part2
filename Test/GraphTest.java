@@ -41,5 +41,17 @@ public class GraphTest {
         assertEquals(1,graph.numVertex);
     }
 
+    @Test(expected = ArrayStoreException.class)
+    public void shouldTestInsertVertex1() {
+        graph.InsertVertex("v2data");
+        graph.InsertVertex("v2data");
+
     }
+
+
+
+    }
+
+
+
 
