@@ -86,7 +86,7 @@ public class SeqListTest {
         assertEquals(3,sut.size());
     }
 
-    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    @Test(expected = Exception.class)
     public void shouldTestGetException(){
         sut.get(100);
     }

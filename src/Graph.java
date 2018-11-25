@@ -8,15 +8,16 @@ public class Graph<Type> {
     }
 
     //get data in graph
-    public Type getVertexData(int number){
+    public Type getVertexData(int number) {
         return verticesList.get(number).getData();
     }
 
     //insert a vertex in graph
     public void InsertVertex(Type city) {
         Vertex<Type> vertex = new Vertex<>(city);
-        verticesList.add(vertex);
-        numVertex++;
+            verticesList.add(vertex);
+            numVertex++;
+
 
 
     }
