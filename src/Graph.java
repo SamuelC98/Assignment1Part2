@@ -13,6 +13,10 @@ public class Graph<Type> {
     }
 
     public void InsertVertex(Type city) {
+        Vertex<Type> vertex = new Vertex<>(city);
+
+        verticesList.add(vertex);
+        numVertex++;
 
 
     }
