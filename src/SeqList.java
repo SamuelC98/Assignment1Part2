@@ -51,8 +51,8 @@ public class SeqList<Type> {
     }
 
     // directly add element
-    public boolean add(Type x){
+    public Type add(Type x){
         add(size, x);
-        return true;
+        return x;
     }
 }

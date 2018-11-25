@@ -33,5 +33,13 @@ public class GraphTest {
         when(v1.getData()).thenReturn("v1data");
         assertEquals(v1.getData(),graph.getVertexData(0));
     }
+
+    @Test
+    public void shouldTestInsertVertex() {
+        graph.InsertVertex("v2data");
+        assertEquals("v2data",graph.getVertexData(0));
+        assertEquals(1,graph.numVertex);
+    }
+
     }
 
