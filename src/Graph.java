@@ -28,6 +28,41 @@ public class Graph<Type> {
     }
 
     public void InsertEdges(Type start, Type end, int fee, int distance){
+        int mark1 = -1;
+        for (int i = 0; ; i++) {
+            if (verticesList.get(i).getData().equals(start)) {
+                mark1 = i;
+                break;
+            }
+        }
+
+        int mark2 = -1;
+        for(int i=0;;i++){
+            if(verticesList.get(i).getData().equals(end)) {
+                mark2 = i;
+                break;
+            }
+        }
+
+        EdgeNode en1 = verticesList.get(mark1).getFirstEdge();
+
+        if(en1 == null) {
+            EdgeNode en2 = new EdgeNode(mark2,fee,distance);
+            verticesList.get(mark1).firstEdge = en2;
+            en2.next = null;
+        }else {
+            while (en1 != null) {
+
+                if(en1.next == null) {
+                    EdgeNode en2 = new EdgeNode(mark2,fee,distance);
+                    en1.next = en2;
+                    en2.next = null;
+                    return;
+                }
+                en1 = en1.next;
+            }
+        }
+
 
     }
 }
