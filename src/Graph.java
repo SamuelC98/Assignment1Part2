@@ -35,6 +35,13 @@ public class Graph<Type> {
                 break;
             }
         }
+        if(mark1 ==-1)
+
+        {
+            System.out.println("don't have");
+            return;
+        }
+
 
         int mark2 = -1;
         for(int i=0;;i++){
@@ -43,6 +50,11 @@ public class Graph<Type> {
                 break;
             }
         }
+        if(mark2==-1){
+            System.out.println("don't have");
+            return;
+        }
+
 
         EdgeNode en1 = verticesList.get(mark1).getFirstEdge();
 
