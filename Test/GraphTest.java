@@ -48,6 +48,15 @@ public class GraphTest {
 
     }
 
+    @Test
+    public void shouldTestInsertEdges() {
+        graph.InsertVertex("v1data");
+        graph.InsertVertex("v2data");
+        graph.InsertEdges("v1data","v2data",55,24);
+        v3 = (Vertex) graph.verticesList.get(0);
+        assertEquals(55,v3.getFirstEdgeFee());
+    }
+
 
 
     }

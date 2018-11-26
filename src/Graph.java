@@ -26,4 +26,8 @@ public class Graph<Type> {
 
 
     }
+
+    public void InsertEdges(Type start, Type end, int fee, int distance){
+
+    }
 }
