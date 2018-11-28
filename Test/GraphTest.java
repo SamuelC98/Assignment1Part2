@@ -75,6 +75,15 @@ public class GraphTest {
 
 
     }
+
+    @Test(expected = ArrayStoreException.class)
+    public void shouldTestInsertEdges3() {
+        graph.InsertVertex("v1data");
+        graph.InsertVertex("v2data");
+        graph.InsertEdges("v1data","v3data",55,24);
+
+
+    }
     }
 
 
