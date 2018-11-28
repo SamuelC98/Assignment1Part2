@@ -41,16 +41,14 @@ public class Graph<Type> {
 
 
         int mark2 = -1;
-        for(int i=0;;i++){
+        for(int i=0;i<verticesList.size ;i++){
             if(verticesList.get(i).getData().equals(end)) {
                 mark2 = i;
                 break;
             }
         }
-        if(mark2==-1){
-            System.out.println("don't have");
-            return;
-        }
+        if(mark2==-1)        throw new ArrayStoreException();
+
 
 
         EdgeNode en1 = verticesList.get(mark1).getFirstEdge();
