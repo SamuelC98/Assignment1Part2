@@ -67,6 +67,14 @@ public class GraphTest {
         assertEquals(55,v3.getFirstEdgeFee());
     }
 
+    @Test(expected = ArrayStoreException.class)
+    public void shouldTestInsertEdges2() {
+        graph.InsertVertex("v1data");
+        graph.InsertVertex("v2data");
+        graph.InsertEdges("v3data","v2data",55,24);
+
+
+    }
     }
 
 
