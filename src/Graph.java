@@ -5,9 +5,9 @@ public class Graph<Type> {
     private int[][] edges = new int[22][22];
 
     private int[] dist = new int[22];
-
+    //keep the length of shortestpath
     private int[] path = new int[22];
-
+    //keep pre nodes in shortestpath
     private boolean[] set = new boolean[22];
     public Graph() {
 
@@ -144,9 +144,6 @@ public class Graph<Type> {
                     path[w] = u;
                 }
         }
-
-
-
 
 
         int[] a = new int[22];
