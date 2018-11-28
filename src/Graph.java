@@ -63,17 +63,19 @@ public class Graph<Type> {
             verticesList.get(mark1).firstEdge = en2;
             en2.next = null;
         }else {
-            if(verticesList.get(en1.dest).getData().equals(end))
-                throw new ArrayStoreException("already exists!");
+            while (en1 != null) {
+                if (verticesList.get(en1.dest).getData().equals(end))
+                    throw new ArrayStoreException("already exists!");
 
-                if(en1.next == null) {
-                    EdgeNode en2 = new EdgeNode(mark2,fee,distance);
+                if (en1.next == null) {
+                    EdgeNode en2 = new EdgeNode(mark2, fee, distance);
                     en1.next = en2;
                     en2.next = null;
                     return;
                 }
                 en1 = en1.next;
             }
+        }
         }
 
 
