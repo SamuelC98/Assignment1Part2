@@ -9,6 +9,9 @@ public class Graph<Type> {
     private int[] path = new int[22];
     //keep pre nodes in shortestpath
     private boolean[] set = new boolean[22];
+    private  int totalFee = 0;
+    private  int totalDistance = 0;
+    private  int[] totalData = new int[2];
     public Graph() {
 
     }
@@ -165,7 +168,24 @@ public class Graph<Type> {
 
                 break;
         }
-        return a[1];
+
+
+
+        for(int j = i; j > 0 ; j--) {
+            EdgeNode se2 = verticesList1.get(a[j]).firstEdge;
+            while (se2!= null) {
+                if (se2.dest == a[j - 1]) {
+                    totalFee = totalFee + se2.getFee();
+                    totalDistance = totalDistance + se2.getDistance();
+
+                    break;
+                }
+                se2 = se2.getNext();
+            }
+        }
+
+        return totalFee;
+
     }
 
 
