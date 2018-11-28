@@ -29,7 +29,7 @@ public class Graph<Type> {
 
     public void InsertEdges(Type start, Type end, int fee, int distance){
         int mark1 = -1;
-        for (int i = 0; ; i++) {
+        for (int i = 0;i<verticesList.size  ; i++) {
             if (verticesList.get(i).getData().equals(start)) {
                 mark1 = i;
                 break;
@@ -37,10 +37,7 @@ public class Graph<Type> {
         }
         if(mark1 ==-1)
 
-        {
-            System.out.println("don't have");
-            return;
-        }
+        throw new ArrayStoreException();
 
 
         int mark2 = -1;
