@@ -73,6 +73,9 @@ public class Graph<Type> {
         }
         }
 
+    public void shortestPath(int v1, int v2) throws Exception {
+
+    }
 
     }
 

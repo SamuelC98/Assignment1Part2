@@ -84,6 +84,46 @@ public class GraphTest {
 
 
     }
+
+    @Test
+    public void shouldTestInsertEdges4() {
+        graph.InsertVertex("v1data");
+        graph.InsertVertex("v2data");
+        graph.InsertVertex("v3data");
+        graph.InsertVertex("v4data");
+        graph.InsertEdges("v1data","v2data",55,24);
+        graph.InsertEdges("v1data","v3data",25,34);
+        graph.InsertEdges("v2data","v3data",2,4);
+        graph.InsertEdges("v1data","v4data",45,41);
+        v1 = (Vertex) graph.verticesList.get(0);
+        v2 = (Vertex) graph.verticesList.get(v1.getFirstEdgeDest());
+        assertEquals("v2data",v2.getData());
+
+
+    }
+
+    @Test
+    public void shouldTestShourtestPath() throws Exception {
+        graph.InsertVertex("v0data");
+        graph.InsertVertex("v1data");
+        graph.InsertVertex("v2data");
+        graph.InsertVertex("v3data");
+        graph.InsertVertex("v4data");
+        graph.InsertVertex("v5data");
+        graph.InsertEdges("v0data","v1data",55,1);
+        graph.InsertEdges("v0data","v2data",25,1);
+        graph.InsertEdges("v1data","v2data",2,1);
+        graph.InsertEdges("v1data","v4data",2,1);
+        graph.InsertEdges("v1data","v3data",2,1);
+        graph.InsertEdges("v4data","v3data",2,1);
+        graph.InsertEdges("v0data","v3data",45,1);
+        graph.InsertEdges("v5data","v3data",45,1);
+        graph.InsertEdges("v2data","v5data",45,1);
+        graph.shortestPath(0,4);
+        graph.shortestPath(1,5);
+
+
+    }
     }
 
 
