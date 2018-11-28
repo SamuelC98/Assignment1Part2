@@ -176,7 +176,7 @@ public class Graph<Type> {
             while (se2!= null) {
                 if (se2.dest == a[j - 1]) {
                     totalFee = totalFee + se2.getFee();
-                    totalDistance = totalDistance + se2.getDistance();
+                    totalDistance = totalDistance + se2.getDistance();//To get the fees i the shortestPath
 
                     break;
                 }
