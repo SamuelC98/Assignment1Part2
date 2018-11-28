@@ -184,7 +184,7 @@ public class Graph<Type> {
             }
         }
 
-        return totalFee;
+        return totalDistance;
 
     }
 
