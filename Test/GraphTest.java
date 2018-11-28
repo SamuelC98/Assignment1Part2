@@ -166,7 +166,7 @@ public class GraphTest {
         graph.InsertEdges("v0data","v3data",3,8);
         graph.InsertEdges("v5data","v3data",2,7);
         graph.InsertEdges("v2data","v5data",4,3);
-        graph.shortestPath(0,4);
+        graph.shortestPath(0,3);
 
 
     }
@@ -188,8 +188,8 @@ public class GraphTest {
         graph.InsertEdges("v0data","v3data",3,8);
         graph.InsertEdges("v5data","v3data",2,7);
         graph.InsertEdges("v2data","v5data",4,3);
-        String city = graph.shortestPath(0,4);
-        assertEquals("v1data",city);
+        graph.shortestPath(1,4);
+
 
     }
 

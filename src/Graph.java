@@ -82,7 +82,7 @@ public class Graph<Type> {
         }
         }
 
-    public String shortestPath(int v1, int v2) throws Exception {
+    public void shortestPath(int v1, int v2) throws Exception {
         int n = verticesList.size();
         int N = 99999;
 
@@ -183,6 +183,7 @@ public class Graph<Type> {
                 se2 = se2.getNext();
             }
         }
+        System.out.println(totalFee+" Euros and the distance is "+totalDistance+" kilomiters");
 
         String[] cityName = new String[100];
 
@@ -193,10 +194,11 @@ public class Graph<Type> {
                 System.out.print(cityName[mark1]);
                 break;
             }
-            cityName[mark1] = verticesList1.get(a[mark1]).getData().toString();
+            cityName[mark1] = verticesList1.get(a[mark1]).getData().toString() + " to ";
+            System.out.print(cityName[mark1]);
 
         }
-        return cityName[1];
+
     }
 
 
