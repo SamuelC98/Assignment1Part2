@@ -2,7 +2,13 @@
 public class Graph<Type> {
     SeqList<Vertex<Type>> verticesList = new SeqList<Vertex<Type>>();
     int numVertex;
+    private int[][] edges = new int[22][22];
 
+    private int[] dist = new int[22];
+
+    private int[] path = new int[22];
+
+    private boolean[] set = new boolean[22];
     public Graph() {
 
     }
@@ -73,9 +79,99 @@ public class Graph<Type> {
         }
         }
 
-    public void shortestPath(int v1, int v2) throws Exception {
+    public int shortestPath(int v1, int v2) throws Exception {
+        int n = verticesList.size();
+        int N = 99999;
 
+
+        for (int v0 = 0; v0 < n; v0++) {
+
+            for (int i = 0; i < n; i++) {
+                edges[v0][i] = N;
+            }
+        }
+
+        SeqList<Vertex> verticesList1 = new SeqList(verticesList);
+
+
+        for (int v0 = 0; v0 < n; v0++) {
+            Vertex temp = verticesList.get(v0);
+            EdgeNode se = temp.getFirstEdge();
+            for (int i = 0; i < n; i++) {
+                if (se != null) {
+                    if (i == se.dest) {
+                        edges[v0][i] = se.getFee();
+                        se = se.getNext();
+                        i = 0;
+
+                    }
+                }
+                if (i == v0) {
+                    edges[v0][i] = 0;
+                }
+
+
+            }
+
+
+        }
+
+
+        for (int i = 0; i < n; i++) {
+            dist[i] = edges[v1][i];
+            set[i] = false;
+            if (i != v1 && dist[i] < N)
+                path[i] = v1;
+            else
+                path[i] = -1;
+        }
+
+        set[v1] = true;
+        dist[v1] = 0;
+
+        for (int i = 0; i < n - 1; i++) {
+            int min = N;
+            int u = v1;
+            for (int j = 0; j < n; j++)
+                if (!set[j] && dist[j] < min) {
+                    u = j;
+                    min = dist[j];
+                }
+            set[u] = true;
+            for (int w = 0; w < n; w++)
+                if (!set[w] && edges[u][w] < N && dist[u] + edges[u][w] < dist[w]) {
+                    dist[w] = dist[u] + edges[u][w];
+                    path[w] = u;
+                }
+        }
+
+
+
+
+
+        int[] a = new int[22];
+        int finish = 0;
+        int temp = v2;
+        int i ;
+
+
+
+        a[0] = temp;
+
+        for( i = 1;;i++){
+
+            a[i] = path[temp];
+
+            temp = path[temp];
+
+            if(a[i] == v1)
+
+                break;
+        }
+        return a[1];
     }
+
+
 
     }
 

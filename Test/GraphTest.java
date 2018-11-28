@@ -120,7 +120,10 @@ public class GraphTest {
         graph.InsertEdges("v5data","v3data",45,1);
         graph.InsertEdges("v2data","v5data",45,1);
         graph.shortestPath(0,4);
+        assertEquals(1,graph.shortestPath(0,4));
         graph.shortestPath(1,5);
+        assertEquals(2,graph.shortestPath(1,5));
+
 
 
     }
