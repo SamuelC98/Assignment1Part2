@@ -120,9 +120,8 @@ public class GraphTest {
         graph.InsertEdges("v5data","v3data",45,1);
         graph.InsertEdges("v2data","v5data",45,1);
         graph.shortestPath(0,4);
-        assertEquals(1,graph.shortestPath(0,4));
         graph.shortestPath(1,5);
-        assertEquals(2,graph.shortestPath(1,5));
+
 
 
     }
@@ -144,8 +143,8 @@ public class GraphTest {
         graph.InsertEdges("v0data","v3data",3,8);
         graph.InsertEdges("v5data","v3data",2,7);
         graph.InsertEdges("v2data","v5data",4,3);
-        int num = graph.shortestPath(1,5);
-        assertEquals(8,num);
+        graph.shortestPath(1,5);
+
 
 
     }
@@ -167,13 +166,30 @@ public class GraphTest {
         graph.InsertEdges("v0data","v3data",3,8);
         graph.InsertEdges("v5data","v3data",2,7);
         graph.InsertEdges("v2data","v5data",4,3);
-        int dis1 = graph.shortestPath(0,4);
-        assertEquals(10,dis1);
+        graph.shortestPath(0,4);
 
 
+    }
 
-
-
+    @Test
+    public void shouldTestShourtestPath3() throws Exception {
+        graph.InsertVertex("v0data");
+        graph.InsertVertex("v1data");
+        graph.InsertVertex("v2data");
+        graph.InsertVertex("v3data");
+        graph.InsertVertex("v4data");
+        graph.InsertVertex("v5data");
+        graph.InsertEdges("v0data","v1data",3,7);
+        graph.InsertEdges("v0data","v2data",1,6);
+        graph.InsertEdges("v1data","v2data",4,4);
+        graph.InsertEdges("v1data","v4data",2,3);
+        graph.InsertEdges("v1data","v3data",5,2);
+        graph.InsertEdges("v4data","v3data",6,1);
+        graph.InsertEdges("v0data","v3data",3,8);
+        graph.InsertEdges("v5data","v3data",2,7);
+        graph.InsertEdges("v2data","v5data",4,3);
+        String city = graph.shortestPath(0,4);
+        assertEquals("v1data",city);
 
     }
 
