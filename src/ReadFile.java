@@ -8,8 +8,6 @@ public class ReadFile {
         InputStreamReader read = new InputStreamReader(new FileInputStream(file));
         BufferedReader bufferedReader1 = new BufferedReader(read);
         String line1 ;
-
-
         while((line1 = bufferedReader1.readLine())!=null) {
 
             String[] s = line1.split(" ");
@@ -17,9 +15,7 @@ public class ReadFile {
 
         }
         BufferedReader br=new BufferedReader(new FileReader(filename));
-
-
-        String line2 = null;
+        String line2;
         while((line2 = br.readLine())!=null) {
 
             String[] s = line2.split(" ");
@@ -29,8 +25,6 @@ public class ReadFile {
         bufferedReader1.close();
         br.close();
         return graph1;
-
-
     }
 
 
