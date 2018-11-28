@@ -175,8 +175,8 @@ public class Graph<Type> {
             EdgeNode se2 = verticesList1.get(a[j]).firstEdge;
             while (se2!= null) {
                 if (se2.dest == a[j - 1]) {
-                    totalFee = totalFee + se2.getFee();
-                    totalDistance = totalDistance + se2.getDistance();//To get the fees i the shortestPath
+                    totalFee = totalFee + se2.getFee();//To get the fees in the shortestPath
+                    totalDistance = totalDistance + se2.getDistance();//To get the distances in the shortestPath
 
                     break;
                 }
