@@ -63,7 +63,6 @@ public class Graph<Type> {
             verticesList.get(mark1).firstEdge = en2;
             en2.next = null;
         }else {
-            while (en1 != null) {
 
                 if(en1.next == null) {
                     EdgeNode en2 = new EdgeNode(mark2,fee,distance);
@@ -77,4 +76,6 @@ public class Graph<Type> {
 
 
     }
-}
+
+
+
