@@ -27,6 +27,7 @@ public class Graph<Type> {
         for (int i = 0; i < verticesList.size(); i++) {
             if (verticesList.get(i).getData().equals(city))
                 throw new ArrayStoreException();
+
         }
 
             verticesList.add(vertex);
