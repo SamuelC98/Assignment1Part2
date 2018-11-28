@@ -36,8 +36,7 @@ public class Graph<Type> {
             }
         }
         if(mark1 ==-1)
-
-        throw new ArrayStoreException("don't have");
+            throw new ArrayStoreException("don't have");
 
 
         int mark2 = -1;
@@ -47,7 +46,8 @@ public class Graph<Type> {
                 break;
             }
         }
-        if(mark2==-1)        throw new ArrayStoreException();
+        if(mark2==-1)
+            throw new ArrayStoreException("don't have");
 
 
 
