@@ -10,8 +10,6 @@ public class Main {
 
 
     public static void main(String[] args) throws Exception {
-
-
         cityCheck.CityCheck(rf1,graph1,Europe,temp,data1,data2);
     }
 
